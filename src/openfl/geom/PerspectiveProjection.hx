@@ -119,8 +119,8 @@ class PerspectiveProjection
 		_mp[0] = focalLength;
 		_mp[5] = focalLength;
 		_mp[11] = 1.0;
-		_mp[12] = ((projectionCenter.x * 2) / Lib.current.stage.stageWidth) - 1;
-		_mp[13] = ((projectionCenter.y * 2) / Lib.current.stage.stageHeight) - 1;
+		_mp[12] = ((100) / Lib.current.stage.stageWidth) - 1;
+		_mp[13] = ((100) / Lib.current.stage.stageHeight) - 1;
 		_mp[15] = 0;
 
 		// matrix3D.rawData = [357.0370178222656,0,0,0,0,357.0370178222656,0,0,0,0,1,1,0,0,0,0];
