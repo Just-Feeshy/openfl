@@ -118,8 +118,8 @@ class PerspectiveProjection
 		var _mp = matrix3D.rawData;
 		_mp[0] = focalLength;
 		_mp[5] = focalLength;
-		_mp[8] = projectionCenter.x;
-		_mp[9] = projectionCenter.y;
+		_mp[8] = projectionCenter.x / Lib.current.stage.stageWidth;
+		_mp[9] = projectionCenter.y / Lib.current.stage.stageHeight;
 		_mp[11] = 1.0;
 		_mp[15] = 0;
 
