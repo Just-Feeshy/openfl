@@ -119,17 +119,21 @@ class PerspectiveProjection
 		_mp[0] = focalLength;
 		_mp[5] = focalLength;
 
+		/*
 		#if !openfl_unit_testing
-		_mp[8] = (projectionCenter.x / Lib.current.stage.stageWidth);
-		_mp[9] = (projectionCenter.y / Lib.current.stage.stageHeight);
+		_mp[8] = (projectionCenter.x / Lib.current.stage.stageWidth) - 1;
+		_mp[9] = (projectionCenter.y) / Lib.current.stage.stageHeight) - 1;
 		#else
 		_mp[8] = projectionCenter.x;
 		_mp[9] = projectionCenter.y;
 		#end
+		*/
 
-		_mp[10] = 1.0;
+		_mp[8] = -projectionCenter.x;
+		_mp[9] = -projectionCenter.y;
+
 		_mp[11] = 1.0;
-		_mp[14] = -1.0;
+		_mp[14] = -1.0 / focalLength;
 		_mp[15] = 0;
 
 		// matrix3D.rawData = [357.0370178222656,0,0,0,0,357.0370178222656,0,0,0,0,1,1,0,0,0,0];
