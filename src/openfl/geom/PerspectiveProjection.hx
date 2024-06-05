@@ -120,8 +120,8 @@ class PerspectiveProjection
 		_mp[5] = focalLength;
 
 		#if !openfl_unit_testing
-		_mp[8] = ((2 * projectionCenter.x) / Lib.current.stage.stageWidth) - 1;
-		_mp[9] = ((2 * projectionCenter.y) / Lib.current.stage.stageHeight) - 1;
+		_mp[8] = (projectionCenter.x / Lib.current.stage.stageWidth) - 1;
+		_mp[9] = (projectionCenter.y / Lib.current.stage.stageHeight) - 1;
 		#else
 		_mp[8] = projectionCenter.x;
 		_mp[9] = projectionCenter.y;
